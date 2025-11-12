@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -101,23 +102,23 @@ const Index = () => {
       <header className="bg-white border-b shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <Icon name="Activity" className="w-8 h-8 text-primary" />
               <span className="text-2xl font-bold text-foreground">ГлюкоКонтроль</span>
-            </div>
+            </Link>
             <nav className="hidden md:flex space-x-8">
-              <a href="#calculator" className="text-foreground hover:text-primary transition-colors font-medium">
-                Калькулятор
-              </a>
-              <a href="#products" className="text-foreground hover:text-primary transition-colors font-medium">
+              <Link to="/" className="text-primary font-bold">
+                Главная
+              </Link>
+              <Link to="/about-diabetes" className="text-foreground hover:text-primary transition-colors font-medium">
                 О диабете
-              </a>
-              <a href="#education" className="text-foreground hover:text-primary transition-colors font-medium">
+              </Link>
+              <Link to="/education" className="text-foreground hover:text-primary transition-colors font-medium">
                 Обучение
-              </a>
-              <a href="#articles" className="text-foreground hover:text-primary transition-colors font-medium">
+              </Link>
+              <Link to="/articles" className="text-foreground hover:text-primary transition-colors font-medium">
                 Статьи
-              </a>
+              </Link>
             </nav>
             <Button className="hidden md:flex">
               <Icon name="Phone" className="w-4 h-4 mr-2" />
@@ -514,10 +515,10 @@ const Index = () => {
             <div>
               <h3 className="font-semibold mb-4">Разделы</h3>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#calculator" className="hover:text-white transition-colors">Калькулятор</a></li>
-                <li><a href="#products" className="hover:text-white transition-colors">О диабете</a></li>
-                <li><a href="#education" className="hover:text-white transition-colors">Обучение</a></li>
-                <li><a href="#articles" className="hover:text-white transition-colors">Статьи</a></li>
+                <li><Link to="/" className="hover:text-white transition-colors">Главная</Link></li>
+                <li><Link to="/about-diabetes" className="hover:text-white transition-colors">О диабете</Link></li>
+                <li><Link to="/education" className="hover:text-white transition-colors">Обучение</Link></li>
+                <li><Link to="/articles" className="hover:text-white transition-colors">Статьи</Link></li>
               </ul>
             </div>
 
